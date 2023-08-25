@@ -12,7 +12,7 @@ const Home: FC = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/card').then(res => {
+    axios.get('/api/card').then(res => {
       setData(res.data)
     })
   }, []);

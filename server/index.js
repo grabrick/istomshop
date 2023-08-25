@@ -15,10 +15,10 @@ app.use(express.json({ extended: true }))
 
 
 // Localhost
-app.use('/api', require('../server/routes/cardRouter'))
+// app.use('/api', require('../server/routes/cardRouter'))
 
 // DEPLOY //
-// app.use('/', require('../server/routes/cardRouter'))
+app.use('/', require('../server/routes/cardRouter'))
 
 async function start() {
   try {
