@@ -1,0 +1,63 @@
+.container {
+    background-color: #F9FAFB;
+    padding: 20px 0;
+    max-width: 100%;
+}
+
+.wrapper {
+    margin: 0 auto;
+    /* width: 840px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cardWrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    padding: 10px;
+}
+
+.paginateContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.button {
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: 2px solid black;
+    border-radius: 100px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.disabled {
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: 2px solid #979797;
+    border-radius: 100px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: not-allowed;
+}
+
+@media screen and (max-width: 671px) {
+    .cardWrapper {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width: 1200px;
+        padding: 10px;
+    }
+}

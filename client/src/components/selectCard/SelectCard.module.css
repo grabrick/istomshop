@@ -1,0 +1,132 @@
+.container {
+    width: 100%;
+}
+
+.wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.firstInfo {
+    margin: 20px 0;
+    gap: 30px;
+    display: flex;
+}
+
+.image {
+    width: 362px;
+    height: 362px;
+    object-fit: contain;
+    border-radius: 10px;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+.title {
+    font-family: 'Montserrat';
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+.backLink {
+    font-family: 'Montserrat';
+    font-weight: 600;
+    color: #E4A718;
+}
+
+.notFound {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 362px;
+    padding: 150px;
+    border: 2px solid black;
+    border-radius: 10px;
+    max-height: 362px;
+    cursor: pointer;
+}
+
+.image:hover {
+    transition: ease .4s;
+    box-shadow: 0px 0px 10px 0px #E4A718;
+    border-radius: 10px;
+}
+
+.notFound:hover {
+    transition: ease .4s;
+    box-shadow: 0px 0px 10px 0px #E4A718;
+    border-radius: 10px;
+}
+
+.warningInfo {
+    width: 100%;
+}
+
+.moreInfo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.priceText {
+    color: #E4A718;
+    font-weight: 400;
+    font-family: 'Montserrat';
+    font-size: 17px;
+}
+
+.priceTitle {
+    text-align: center;
+}
+
+.priceTitleWrapper {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.descriptionWrapper {
+    width: 100%;
+}
+
+.descriptionTitle {
+    margin-bottom: 5px;
+}
+
+.descriptionText {
+    font-family: 'Montserrat';
+    font-weight: 500;
+    padding-left: 10px;
+}
+
+.buttonWrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.purchaseWrapper {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.payButton {
+    border: none;
+    background-color: #E4A718;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.button {
+    border: 1px solid silver;
+    background-color: transparent;
+    cursor: pointer;
+    width: 50px;
+    height: 30px;
+}

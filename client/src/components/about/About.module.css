@@ -1,0 +1,205 @@
+.container {
+    background-image: url("../../../public/images/el.svg");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 100%;
+}
+
+.wrapper {
+    max-width: 1660px;
+    margin: 0 auto;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    color: #E4A718;
+    font-size: 45px;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+}
+
+.aboutInfo {
+    margin-top: 21px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px 0px #000;
+    border-radius: 34px;
+    padding: 10px 10px 38px 10px;
+}
+
+.text {
+    margin-bottom: 35px;
+    color: #7A7A7A;
+    font-size: 16px;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+}
+
+.targetWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 21px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px 0px #000;
+    border-radius: 34px;
+    padding: 10px 10px 38px 10px;
+    max-width: 790px;
+}
+
+.targetTitle {
+    color: #54595F;
+    font-family: "Montserrat";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.disc {
+    color: #7A7A7A;
+    font-family: "Montserrat";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 25.6px;
+}
+
+.disc1 {
+    color: #7A7A7A;
+    font-family: "Montserrat";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    margin-bottom: 35px;
+    line-height: 25.6px;
+}
+
+.disc2 {
+    color: #7A7A7A;
+    font-family: "Montserrat";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    margin-bottom: 35px;
+    line-height: 25.6px;
+}
+
+.taskWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 21px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px 0px #000;
+    border-radius: 34px;
+    padding: 10px 10px 38px 10px;
+}
+
+.taskTitle {
+    color: #54595F;
+    font-family: "Montserrat";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.taskContainer {
+    display: flex;
+    gap: 20px;
+}
+
+.contactWrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 20px 0px 20px;
+    margin-top: 50px;
+}
+
+.contactTitle {
+    color: #E4A718;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 40px;
+}
+
+.wrappWrapper {
+    display: flex;
+    gap: 200px;
+}
+
+.contactText {
+    margin-top: 30px;
+    color: #000;
+    text-align: center;
+    font-family: "Montserrat";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px;
+}
+
+.addres {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.number {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media screen and (max-width: 1530px) {
+    .container {
+        background-image: none;
+        background-color: #ECECEC;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .contactWrapper {
+        flex-direction: column;
+    }
+
+    .wrappWrapper {
+        margin-top: 20px;
+    }
+
+    .taskContainer {
+        flex-wrap: wrap;
+        gap: 0;
+    }
+
+    .targetWrapper {
+        max-width: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contactText {
+        font-size: 12px;
+    }
+
+    .wrappWrapper {
+        /* flex-direction: column; */
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .wrappWrapper {
+        flex-direction: column;
+        gap: 50px;
+    }
+}

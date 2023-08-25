@@ -1,0 +1,292 @@
+.container {
+    max-width: 100%;
+}
+
+.wrapper {
+    padding: 10px;
+    max-width: 1920px;
+    margin: 0 auto;
+    height: 119px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.linkWrapper {
+    display: flex;
+    width: 800px;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 200px;
+    height: 70px;
+    cursor: pointer;
+}
+
+.link {
+    font-size: 20px;
+    font-weight: 600;
+    font-family: "Montserrat";
+    line-height: 20px;
+    color: #7A7A7A;
+}
+
+.active {
+    font-size: 23px;
+    line-height: 20px;
+    font-weight: 600;
+    font-family: "Montserrat";
+    color: #E4A718;
+}
+
+.input {
+    width: 340px;
+    height: 35px;
+    padding: 0 5px;
+    font-family: "Montserrat";
+    font-size: 18px;
+}
+
+.imgWrapper {
+    cursor: pointer;
+    background-color: #54595F;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 15px 15px 0;
+    padding: 10px;
+    /* margin-left: 300px; */
+}
+
+.inputWrapper {
+    display: flex;
+    align-items: center;
+}
+
+.contantWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* width: 100px; */
+}
+
+.basketWrapper {
+    margin-left: 60px;
+}
+
+.contactLink {
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.contactLink:nth-child(3) {
+    margin-right: 0;
+}
+
+.burgerMenu {
+    /* margin-right: 20px; */
+    display: none;
+}
+
+@media screen and (max-width: 1644px) {
+    .logo {
+        width: 180px;
+        height: 70px;
+    }
+
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        height: 70px;
+    }
+
+    .linkWrapper {
+       justify-content: space-between;
+       width: 700px;
+    }
+
+    .link {
+        font-size: 17px;
+    }
+
+    .active {
+        font-size: 17px;
+    }
+
+    .imgWrapper {
+        height: 30px;
+    }
+
+    .input {
+        width: 180px;
+        height: 30px;
+        font-size: 15px;
+    }
+
+    .contantWrapper {
+        /* display: none; */
+    }
+
+    .burgerMenu {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .logo {
+        width: 150px;
+        height: 60px;
+    }
+
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        height: 70px;
+    }
+
+    .linkWrapper {
+       justify-content: space-between;
+       width: 600px;
+    }
+
+    .link {
+        font-size: 17px;
+    }
+
+    .active {
+        font-size: 17px;
+    }
+
+    .imgWrapper {
+        height: 30px;
+    }
+
+    .input {
+        width: 180px;
+        height: 30px;
+        font-size: 15px;
+    }
+
+    .contantWrapper {
+        /* display: none; */
+    }
+
+    .burgerMenu {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .logo {
+        width: 150px;
+        height: 60px;
+    }
+
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        height: 70px;
+    }
+
+    .linkWrapper {
+       width: 500px;
+    }
+
+    .link {
+        font-size: 17px;
+    }
+
+    .active {
+        font-size: 17px;
+    }
+
+    .imgWrapper {
+        height: 30px;
+    }
+
+    .input {
+        width: 150px;
+        height: 30px;
+        font-size: 15px;
+    }
+
+    .contantWrapper {
+        display: none;
+    }
+
+    .burgerMenu {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .logo {
+        width: 150px;
+        height: 60px;
+    }
+
+    .linkWrapper {
+       display: none;
+    }
+
+    .imgWrapper {
+        height: 30px;
+    }
+
+    .input {
+        width: 350px;
+        height: 30px;
+        font-size: 15px;
+    }
+
+    .contantWrapper {
+        display: none;
+    }
+
+    .burgerMenu {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 605px) {
+    .input {
+        width: 130px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .logo {
+        width: 150px;
+        height: 40px;
+    }
+
+    .linkWrapper {
+        display: none;
+    }
+
+    .inputWrapper {
+        width: 150px;
+        margin-right: 20px;
+    }
+
+    .imgWrapper {
+        height: 30px;
+    }
+
+    .input {
+        /* width: 150px; */
+        height: 30px;
+        font-size: 15px;
+    }
+
+    .contantWrapper {
+        display: none;
+    }
+
+    .burgerMenu {
+        display: block;
+    }
+}

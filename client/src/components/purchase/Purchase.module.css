@@ -1,0 +1,195 @@
+.container {
+    background-image: url("../../../public/images/Section.svg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    max-width: 100%;
+}
+
+.wrapper {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 15px 15px 40px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.infoWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* padding: 0 15px; */
+}
+
+.title {
+    color: #E4A718;
+    font-size: 45px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    text-align: center;
+}
+
+.infoTitle {
+    margin-left: 20px;
+}
+
+.aboutInfo {
+    margin-top: 21px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px 0px #000;
+    border-radius: 34px;
+    padding: 10px 10px 38px 10px;
+    max-width: 1600px;
+}
+
+.text {
+    margin-top: 20px;
+    margin-bottom: 35px;
+    color: #7A7A7A;
+    font-size: 16px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.targetWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 21px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px 0px #000;
+    border-radius: 34px;
+    padding: 10px 10px 38px 10px;
+    /* width: 379px; */
+    width: 370px;
+    /* width: 360px; */
+}
+
+.targetTitle {
+    color: #54595F;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.disc {
+    color: #7A7A7A;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 25.6px;
+    margin-top: 30px;
+}
+
+.taskWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 21px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px 0px #000;
+    border-radius: 34px;
+    padding: 10px 10px 38px 10px;
+}
+
+.taskTitle {
+    color: #54595F;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.taskContainer {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.ul {
+    list-style-type: none;
+    padding-left: 30px;
+}
+
+.li {
+    color: #7A7A7A;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 25.6px;
+}
+
+.bold {
+    color: #000;
+}
+
+.purchaseContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+}
+
+.purchaseTitle {
+    color: #54595F;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.purchaseTextWrapper {
+    /* width: 1590px; */
+}
+
+.purchaseText {
+    display: flex;
+    justify-content: flex-start;
+    color: #7A7A7A;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 25.6px;
+}
+
+.purchaseWrapper {
+    max-width: 1610px;
+    border-radius: 34px;
+    margin-top: 25px;
+    padding: 10px 10px 30px 10px;
+    background: #FFF;
+    box-shadow: 0px 0px 10px 0px #000;
+    display: flex;
+    flex-direction: column;
+}
+
+.paymentTitle {
+    color: #54595F;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.aboutPayment {
+    margin-top: 45px;
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+}
+
+/* @media screen and (max-width: 1440px) {
+} */
