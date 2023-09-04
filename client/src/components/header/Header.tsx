@@ -19,16 +19,16 @@ const Header: FC = () => {
     return (
         <header className={m.container}>
             <div className={m.wrapper}>
-                <Image className={m.logo} src={Logo} alt='' />
+                <Image className={m.logo} src={Logo} alt='' onClick={() => {router.push('/home')}} />
 
                 <div className={m.linkWrapper}>
-                    <Link className={router.asPath === '/home' ? `${m.active}` : `${m.link}`} href="/home">Магазин</Link>
+                    <Link className={router.asPath === '/shop' ? `${m.active}` : `${m.link}`} href="/shop">Магазин</Link>
                     <Link className={router.asPath === '/purchase' ? `${m.active}` : `${m.link}`} href="/purchase">Оплата и доставка</Link>
                     <Link className={router.asPath === '/about' ? `${m.active}` : `${m.link}`} href="/about">О нас</Link>
                     <Link className={router.asPath === '/contact' ? `${m.active}` : `${m.link}`} href="/contact">Контакты</Link>
                 </div>
 
-                {router.asPath === '/home' ? (
+                {router.asPath === '/shop' ? (
                     <div className={m.inputWrapper}>
                         <input className={m.input} placeholder='Поиск товаров'></input>
                         <div className={m.imgWrapper}>
@@ -44,7 +44,7 @@ const Header: FC = () => {
                     <Image className={m.contactLink} src={Telegram} alt='' />
                     <Image className={m.contactLink} src={Whatsapp} alt='' />
 
-                    {router.asPath === '/home' ? (
+                    {router.asPath === '/shop' ? (
                         <div className={m.basketWrapper}>
                             <Image className={m.contactLink} src={Basket} alt='' />
                         </div>

@@ -15,7 +15,7 @@ const Footer: FC = () => {
     <footer className={m.container}>
       <div className={m.wrapper}>
         <div className={m.linkWrapper}>
-          <Link className={router.asPath === '/home' ? `${m.active}` : `${m.link}`} href="/home">Магазин</Link>
+          <Link className={router.asPath === '/shop' ? `${m.active}` : `${m.link}`} href="/shop">Магазин</Link>
           <Link className={router.asPath === '/purchase' ? `${m.active}` : `${m.link}`} href="/purchase">Оплата и доставка</Link>
           <Link className={router.asPath === '/about' ? `${m.active}` : `${m.link}`} href="/about">О нас</Link>
           <Link className={router.asPath === '/contact' ? `${m.active}` : `${m.link}`} href="/contact">Контакты</Link>
