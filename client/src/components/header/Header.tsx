@@ -18,9 +18,6 @@ const Header: FC = () => {
     const [data, setData] = useState<any>([])
     const state = useAppSelector(state => state.basketSlice.basket)
     const router = useRouter()
-    // if (typeof window !== 'undefined') {
-    //     console.log("123", window.localStorage.getItem('persist:root'));
-    // }
 
     useEffect(() => {
         setData(state)

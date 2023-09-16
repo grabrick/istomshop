@@ -36,11 +36,7 @@ const Card: FC<ICard> = () => {
     } else {
       setCount(count)
     }
-    // console.log(findCurrentCount?.count);
-    
   }, [count])
-
-  // console.log(data);
   
   const handleAddItem = (items: any) => {
     dispatch(addItem({id: items._id, image: items.mainImage, title: items.title, price: items.price, count: count}))

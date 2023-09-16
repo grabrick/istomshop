@@ -36,7 +36,6 @@ const Basket: FC = () => {
   const onClickDelete = (item: any) => {
     dispatch(decrement(item.id))
   }
-  console.log(total);
   return (
     <section className={m.container}>
       <div className={m.wrapper}>

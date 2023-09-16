@@ -3,7 +3,7 @@ import React, { FC } from 'react'
 
 const CardPage: FC = () => {
   return (
-    <Card />
+    <Card _id={''} title={''} mainImage={''} description={''} category={''} price={0} />
   )
 }
 

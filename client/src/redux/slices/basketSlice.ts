@@ -3,12 +3,12 @@ import { IBasket } from "@/types/types";
 
 type State = {
   basket: IBasket[];
-  totalPrice: number; // Добавляем поле для общей цены
+  totalPrice: number;
 };
 
 const initialState: State = {
   basket: [],
-  totalPrice: 0, // Инициализируем общую цену нулем
+  totalPrice: 0,
 };
 
 const basketSlice = createSlice({
@@ -25,7 +25,6 @@ const basketSlice = createSlice({
         state.basket.push(newItem);
       }
 
-      // Обновляем общую цену при добавлении товара
       state.totalPrice += newItem.price * newItem.count;
     },
     removeItem: (state, action) => {
@@ -35,8 +34,6 @@ const basketSlice = createSlice({
       if (indexToRemove !== -1) {
         const removedItem = state.basket[indexToRemove];
         state.basket.splice(indexToRemove, 1);
-
-        // Вычитаем цену удаленного товара из общей цены
         state.totalPrice -= removedItem.price * removedItem.count;
       }
     },
@@ -46,7 +43,6 @@ const basketSlice = createSlice({
 
       if (itemToIncrement) {
         itemToIncrement.count += 1;
-        // Увеличиваем общую цену на цену товара
         state.totalPrice += itemToIncrement.price;
       }
     },
@@ -57,15 +53,12 @@ const basketSlice = createSlice({
       if (itemToDecrement) {
         if (itemToDecrement.count > 1) {
           itemToDecrement.count -= 1;
-          // Уменьшаем общую цену на цену товара
           state.totalPrice -= itemToDecrement.price;
         } else {
           const indexToRemove = state.basket.findIndex((item) => item.id === itemIdToDecrement);
           if (indexToRemove !== -1) {
             const removedItem = state.basket[indexToRemove];
             state.basket.splice(indexToRemove, 1);
-
-            // Вычитаем цену удаленного товара из общей цены
             state.totalPrice -= removedItem.price * removedItem.count;
           }
         }
