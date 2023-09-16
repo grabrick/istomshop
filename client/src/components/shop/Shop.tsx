@@ -1,9 +1,9 @@
 import React, { FC, useEffect, useState } from 'react'
 import m from './Shop.module.css'
 import CardComponent from './cardComponent/CardComponent'
-import Image from 'next/image'
-import leftArrow from '../../../public/images/arrow-left-s-line.svg'
-import rightArrow from '../../../public/images/arrow-right-s-line.svg'
+// import Image from 'next/image'
+// import leftArrow from '../../../public/images/arrow-left-s-line.svg'
+// import rightArrow from '../../../public/images/arrow-right-s-line.svg'
 import Pagination from '@/components/extra/Paginate/Pagination'
 import axios from 'axios'
 import { useAppDispatch, useAppSelector } from '@/redux/hooks/redux.hook'
@@ -33,14 +33,11 @@ const Home: FC = () => {
   const [currentPage, setCurrentPage] = useState<number>(1);
   const totalPages = Math.ceil(data.length / itemsPerPage);
 
-  // Вычисляем индексы начала и конца данных для текущей страницы
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
 
-  // Отображаем только необходимые элементы для текущей страницы
   const slicedData = data.slice(startIndex, endIndex);
 
-  // Обработчик смены страницы
   const handlePageChange = (pageNumber: number) => {
     setCurrentPage(pageNumber);
   };
