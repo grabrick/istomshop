@@ -16,7 +16,7 @@ const Home: FC = () => {
   const dispatch = useAppDispatch()
 
   useEffect(() => {
-    axios.get('/card').then(res => {
+    axios.get('http://31.129.102.16:5000/card').then(res => {
       setData(res.data)
       dispatch(setCards(res.data))
     })
