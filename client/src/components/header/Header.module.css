@@ -51,6 +51,21 @@
 .imgWrapper {
     cursor: pointer;
     background-color: #54595F;
+    border: none;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 15px 15px 0;
+    padding: 10px;
+    /* margin-left: 300px; */
+}
+
+.imgWrapper:active {
+    cursor: pointer;
+    background-color: #E4A818;
+    border: none;
     width: 35px;
     height: 35px;
     display: flex;
@@ -75,10 +90,27 @@
 
 .basketWrapper {
     margin-left: 60px;
+    position: relative;
+}
+
+.count {
+    position: absolute;
+    background-color: #E4A818;
+    width: 25px;
+    height: 25px;
+    /* padding: 5px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: -12px;
+    right: 0;
+    border-radius: 100px;
 }
 
 .contactLink {
     margin-right: 5px;
+    width: 30px;
+    height: 30px;
     cursor: pointer;
 }
 

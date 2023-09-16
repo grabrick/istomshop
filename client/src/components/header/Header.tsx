@@ -1,8 +1,9 @@
-import React, { FC, useState } from 'react'
+import React, { FC, useEffect, useState } from 'react'
 import m from "@/components/header/Header.module.css"
 import Logo from "../../../public/images/Logo.svg"
 import Search from "../../../public/images/Search.svg"
 import Basket from "../../../public/images/Basket.svg"
+import BasketActive from '../../../public/images/BasketActive.svg'
 import Telegram from "../../../public/images/Telegram.svg"
 import Whatsapp from "../../../public/images/Whats`app.svg"
 import Facebook from "../../../public/images/Facebook.svg"
@@ -10,11 +11,20 @@ import Menu from "../../../public/images/list-unordered.svg"
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import { useAppSelector } from '@/redux/hooks/redux.hook'
 
 const Header: FC = () => {
     const [open, setOpen] = useState<boolean>(false);
+    const [data, setData] = useState<any>([])
+    const state = useAppSelector(state => state.basketSlice.basket)
     const router = useRouter()
+    // if (typeof window !== 'undefined') {
+    //     console.log("123", window.localStorage.getItem('persist:root'));
+    // }
 
+    useEffect(() => {
+        setData(state)
+    }, [state])   
     
     return (
         <header className={m.container}>
@@ -31,9 +41,9 @@ const Header: FC = () => {
                 {router.asPath === '/shop' ? (
                     <div className={m.inputWrapper}>
                         <input className={m.input} placeholder='Поиск товаров'></input>
-                        <div className={m.imgWrapper}>
+                        <button className={m.imgWrapper}>
                             <Image className={m.img} src={Search} alt='' />
-                        </div>
+                        </button>
                     </div>
                 ) : (
                     ""
@@ -44,13 +54,18 @@ const Header: FC = () => {
                     <Image className={m.contactLink} src={Telegram} alt='' />
                     <Image className={m.contactLink} src={Whatsapp} alt='' />
 
-                    {router.asPath === '/shop' ? (
-                        <div className={m.basketWrapper}>
-                            <Image className={m.contactLink} src={Basket} alt='' />
-                        </div>
-                    ) : (
+                    {/* {router.asPath === '/shop' || data.length > 0 ? ( */}
+                        <Link href="/basket" className={m.basketWrapper}>
+                            <Image className={m.contactLink} src={router.asPath === '/basket' ? BasketActive : Basket} alt='' />
+                            {data.length > 0 && (
+                                <div className={m.count}>
+                                    <p>{data.length}</p>
+                                </div>
+                            )}
+                        </Link>
+                    {/* ) : (
                         ""
-                    )}
+                    )} */}
                 </div>
 
                 <div className={m.burgerMenu}>

@@ -6,21 +6,29 @@ import leftArrow from '../../../public/images/arrow-left-s-line.svg'
 import rightArrow from '../../../public/images/arrow-right-s-line.svg'
 import Pagination from '@/components/extra/Paginate/Pagination'
 import axios from 'axios'
+import { useAppDispatch, useAppSelector } from '@/redux/hooks/redux.hook'
+import { setCards } from '@/redux/slices/cardSlice'
 
 
 const Home: FC = () => {
   const [data, setData] = useState([]);
+  // const data = useAppSelector(state => state.cardSlice.card)
+  const dispatch = useAppDispatch()
 
   useEffect(() => {
     axios.get('/card').then(res => {
       setData(res.data)
+      dispatch(setCards(res.data))
     })
   }, []);
+
   // useEffect(() => {
-  //   axios.get('http://localhost:5000/api/card').then(res => {
+  //   axios.get('http://localhost:5000/card').then(res => {
   //     setData(res.data)
+  //     dispatch(setCards(res.data))
   //   })
   // }, []);
+
   const itemsPerPage = 21;
   const [currentPage, setCurrentPage] = useState<number>(1);
   const totalPages = Math.ceil(data.length / itemsPerPage);

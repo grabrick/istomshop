@@ -6,13 +6,19 @@ import m from "./SelectCard.module.css"
 import NotFound from '../../../public/images/NotFound.svg'
 import Image from 'next/image';
 import Link from 'next/link';
+import { useAppDispatch, useAppSelector } from '@/redux/hooks/redux.hook';
+import { addItem } from '@/redux/slices/basketSlice';
+import { ICard } from '@/types/types';
 
-
-const Card: FC = () => {
-  const data: any = []
+const Card: FC<ICard> = () => {
+  const data = useAppSelector(state => state.cardSlice.card)
+  const stateCount = useAppSelector(state => state.basketSlice.basket)
+  const dispatch = useAppDispatch()
+  
   const router = useRouter();
   const { id } = router.query;
-  const findCurrentCard = data.find((items: any) => items.id === Number(id))
+  const findCurrentCard = data.find((items: ICard) => items?._id === id) as unknown as ICard
+  const findCurrentCount = stateCount.find((i: any) => i?.id === findCurrentCard?._id) as any
   const [count, setCount] = useState<number>(0)
   const increment = () => {
     setCount(count + 1);
@@ -24,16 +30,33 @@ const Card: FC = () => {
     }
   };
 
+  useEffect(() => {
+    if (findCurrentCount?.count !== undefined) {
+      setCount(findCurrentCount?.count)
+    } else {
+      setCount(count)
+    }
+    // console.log(findCurrentCount?.count);
+    
+  }, [count])
+
+  // console.log(data);
+  
+  const handleAddItem = (items: any) => {
+    dispatch(addItem({id: items._id, image: items.mainImage, title: items.title, price: items.price, count: count}))
+    
+  }
+  
 
   return (
     <div className={m.container}>
       <div className={m.wrapper}>
-        <Link className={m.backLink} href="/home">{"<"} Назад</Link>
+        <Link className={m.backLink} href="/shop">{"<"} Назад</Link>
         <h1 className={m.title}>{findCurrentCard?.title}</h1>
         <div className={m.firstInfo}>
           <img
             className={findCurrentCard?.mainImage === "" ? m.notFound : m.image}
-            src={findCurrentCard?.mainImage === "" ? NotFound.src : findCurrentCard?.mainImage} alt=""
+            src={findCurrentCard?.mainImage === '' ? NotFound.src : findCurrentCard?.mainImage} alt=""
           />
 
           {findCurrentCard?.description === "" ? (
@@ -58,7 +81,7 @@ const Card: FC = () => {
                         <button className={m.button} onClick={increment}>{"+"}</button>
                     </div>
 
-                    <button className={m.payButton}>В корзину</button>
+                    <button className={m.payButton} onClick={() => handleAddItem(findCurrentCard)}>В корзину</button>
                 </div>
               </div>
             </div>
