@@ -13,19 +13,19 @@ const Home: FC = () => {
   const cardData = useAppSelector(state => state.cardSlice.card)
   const dispatch = useAppDispatch()
 
-  // useEffect(() => {
-  //   axios.get('http://31.129.102.16:5000/card').then(res => {
-  //     setData(res.data)
-  //     dispatch(setCards(res.data))
-  //   })
-  // }, []);
-
   useEffect(() => {
-    axios.get('http://localhost:5000/card').then(res => {
+    axios.get('http://31.129.102.16:5000/card').then(res => {
       setData(res.data)
       dispatch(setCards(res.data))
     })
   }, []);
+
+  // useEffect(() => {
+  //   axios.get('http://localhost:5000/card').then(res => {
+  //     setData(res.data)
+  //     dispatch(setCards(res.data))
+  //   })
+  // }, []);
 
   const itemsPerPage = 21;
   const [currentPage, setCurrentPage] = useState<number>(1);
@@ -59,7 +59,7 @@ const Home: FC = () => {
             ))}
           </div>
           <div className={m.paginate}>
-            {data.length > itemsPerPage && (
+            {data?.length > itemsPerPage && (
 
               <Pagination
                 totalPages={Math.ceil(
