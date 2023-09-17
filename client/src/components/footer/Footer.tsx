@@ -21,7 +21,7 @@ const Footer: FC = () => {
           <Link className={router.asPath === '/contact' ? `${m.active}` : `${m.link}`} href="/contact">Контакты</Link>
         </div>
 
-        <div className={m.linkWrapper}>
+        {/* <div className={m.linkWrapper}>
           <Link className={m.link} href="/">Личный кабинет</Link>
           <Link className={m.link} href="/payment">Мои заказы</Link>
           <Link className={m.link} href="/about">Избранные товары</Link>
@@ -33,7 +33,7 @@ const Footer: FC = () => {
           <Link className={m.link} href="/payment">Как оформить заказ</Link>
           <Link className={m.link} href="/about">Вопросы и ответы</Link>
           <Link className={m.link} href="/contact">Политика конфиденциальности</Link>
-        </div>
+        </div> */}
 
         <div className={m.wrapperWrapp}>
           <div className={m.contantWrapper}>

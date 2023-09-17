@@ -1,0 +1,69 @@
+.slider {
+    width: 100%;
+    height: 290px;
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+
+.sliderWrapper {
+    max-width: 800px;
+    height: 290px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btnBack {
+    background-image: url('../../../../public/images/arrow-left-s-bold.svg');
+    width: 60px;
+    height: 70px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.btnNext {
+    background-image: url('../../../../public/images/arrow-right-s-bold.svg');
+    width: 60px;
+    height: 70px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.btnBack:active {
+    background-image: url('../../../../public/images/arrow-left-s-active.svg');
+    width: 60px;
+    height: 70px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.btnNext:active {
+    background-image: url('../../../../public/images/arrow-right-s-active.svg');
+    width: 60px;
+    height: 70px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 536px) {
+    .img {
+        width: 350px;
+    }
+
+    .sliderWrapper {
+        height: 200px;
+    }
+}

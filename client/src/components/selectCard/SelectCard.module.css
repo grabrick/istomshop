@@ -1,5 +1,6 @@
 .container {
     width: 100%;
+    padding: 0 10px;
 }
 
 .wrapper {
@@ -8,6 +9,7 @@
     padding: 10px;
     border: 2px solid black;
     border-radius: 10px;
+
 }
 
 .firstInfo {
@@ -35,6 +37,10 @@
     font-family: 'Montserrat';
     font-weight: 600;
     color: #E4A718;
+}
+
+.titleWrapper {
+    width: 100%;
 }
 
 .notFound {
@@ -69,6 +75,11 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    gap: 20px;
+}
+
+#Text {
+    margin-bottom: 20px;
 }
 
 .priceText {
@@ -80,6 +91,7 @@
 
 .priceTitle {
     text-align: center;
+    font-family: Montserrat;
 }
 
 .priceTitleWrapper {
@@ -94,6 +106,7 @@
 
 .descriptionTitle {
     margin-bottom: 5px;
+    font-family: Montserrat;
 }
 
 .descriptionText {
@@ -121,12 +134,100 @@
     font-size: 16px;
     padding: 10px 20px;
     border-radius: 20px;
+    cursor: pointer;
+}
+
+.payButton:active {
+    background-color: #b0b0b0;
 }
 
 .button {
-    border: 1px solid silver;
+    border: 2px solid black;
     background-color: transparent;
     cursor: pointer;
     width: 50px;
     height: 30px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button:active {
+    border:2px solid #E4A718;
+    box-shadow: 0px 0px 10px 0px #E4A718;
+    color: #E4A718;
+}
+
+.notActiveBtn {
+    cursor: not-allowed;
+    border: 2px solid silver;
+    background-color: transparent;
+    width: 50px;
+    height: 30px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.notActive {
+    cursor: not-allowed;
+    border: none;
+    background-color: #b0b0b0;
+    color: black;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.infoWrapper {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.infoText {
+    font-family: Montserrat;
+    font-size: 18px;
+}
+
+@media screen and (max-width: 800px) {
+    .image {
+        width: 300px;
+        height: 300px
+    }
+}
+
+@media screen and (max-width: 625px) {
+    .image {
+        width: 250px;
+        height: 250px
+    }
+
+    .purchaseWrapper {
+        align-items: center;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .image {
+        width: 285px;
+        height: 250px
+    }
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .firstInfo {
+        align-items: center;
+        flex-direction: column;
+    }
 }

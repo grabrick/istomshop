@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { FC, useEffect, useState } from 'react'
 import m from './burgerMenu.module.css'
 import Image from 'next/image'
 import Logo from "../../../../public/images/Logo.svg"
@@ -8,6 +8,7 @@ import Whatsapp from "../../../../public/images/Whats`app.svg"
 import Facebook from "../../../../public/images/Facebook.svg"
 import { useRouter } from 'next/router'
 import Link from 'next/link'
+import { useAppSelector } from '@/redux/hooks/redux.hook'
 
 type Tprops = {
   isActiveMenu: boolean,
@@ -16,6 +17,12 @@ type Tprops = {
 
 const BurgerMenu: FC<Tprops> = ({ isActiveMenu, setOpened }) => {
   const router = useRouter()
+  const [data, setData] = useState<any>([])
+  const state = useAppSelector(state => state.basketSlice.basket)
+
+  useEffect(() => {
+    setData(state)
+  }, [state])
 
   return (
     <div className={isActiveMenu === true ? m.containerActive : m.contauner} onClick={() => setOpened(false)}>
@@ -27,6 +34,14 @@ const BurgerMenu: FC<Tprops> = ({ isActiveMenu, setOpened }) => {
           </div>
 
           <div className={m.navigateWrapper}>
+            <div className={m.basketWrapper}>
+              <Link className={router.asPath === '/basket' ? `${m.active}` : `${m.link}`} href="/basket">Корзина</Link>
+              {data.length > 0 && (
+                <div className={m.count}>
+                  <p>{data.length}</p>
+                </div>
+              )}
+            </div>
             <Link className={router.asPath === '/shop' ? `${m.active}` : `${m.link}`} href="/shop">Магазин</Link>
             <Link className={router.asPath === '/purchase' ? `${m.active}` : `${m.link}`} href="/purchase">Оплата и доставка</Link>
             <Link className={router.asPath === '/about' ? `${m.active}` : `${m.link}`} href="/about">О нас</Link>

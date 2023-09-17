@@ -14,35 +14,41 @@ import brokenTooth from '../../../public/images/brokenTooth.svg'
 import clearTooth from '../../../public/images/clearTooth.svg'
 import clean from '../../../public/images/clean.svg'
 import BlankImg from '../../../public/images/blankImg.svg'
-import Part1 from '../../../public/images/tokuyama_dental.svg'
-import Part2 from '../../../public/images/dentsply.svg'
-import Part3 from '../../../public/images/3mban.svg'
 import Image from "next/image";
+import Slider from "../Extra/Slider/Slider";
 
 const Home: FC = () => {
     const cardData = [
-        {id: 0, img: Tooth, title: 'Стоматологические материалы'},
-        {id: 1,img: Xtool, title: 'Стоматологическое оборудование'},
-        {id: 2,img: Itool, title: 'Стоматологическое инструменты'},
-        {id: 3,img: Jaw, title: 'Зуботехнические материалы'},
-        {id: 4,img: BoldTool, title: 'Эндодонтические Инструменты'},
-        {id: 5,img: Mask, title: 'Расходные материалы'},
-        {id: 6,img: Freeze, title: 'Анестезия'},
-        {id: 7,img: brokenTooth, title: 'Ортопедия'},
-        {id: 8,img: clearTooth, title: 'Хирургия'},
-        {id: 9,img: clean, title: 'Дизенфекция и стерилизация'},
+        { id: 0, img: Tooth, title: 'Стоматологические материалы' },
+        { id: 1, img: Xtool, title: 'Стоматологическое оборудование' },
+        { id: 2, img: Itool, title: 'Стоматологическое инструменты' },
+        { id: 3, img: Jaw, title: 'Зуботехнические материалы' },
+        { id: 4, img: BoldTool, title: 'Эндодонтические Инструменты' },
+        { id: 5, img: Mask, title: 'Расходные материалы' },
+        { id: 6, img: Freeze, title: 'Анестезия' },
+        { id: 7, img: brokenTooth, title: 'Ортопедия' },
+        { id: 8, img: clearTooth, title: 'Хирургия' },
+        { id: 9, img: clean, title: 'Дизенфекция и стерилизация' },
     ]
+
+    const images = [
+        '/images/slider/Group67.jpg',
+        '/images/slider/Group68.jpg',
+        '/images/slider/inibsa1.jpg',
+        '/images/slider/kristident1.jpg',
+        '/images/slider/taifunn1.jpg',
+      ];
 
     return (
         <section className={m.container}>
             <div className={m.wrapper}>
                 <div className={m.introContainer}>
                     <div className={m.infoWrapperWrapp}>
-                    <div className={m.infoWrapper}>
-                        <h1 className={m.title}>Инструменты высочайшего качества для профессиональных <span className={m.span}>стоматологов</span></h1>
-                        <p className={m.text}>Обеспечьте свою практику лучшими инструментами от ведущих производителей</p>
-                        <button className={m.btn}>В каталог</button>
-                    </div>
+                        <div className={m.infoWrapper}>
+                            <h1 className={m.title}>Инструменты высочайшего качества для профессиональных <span className={m.span}>стоматологов</span></h1>
+                            <p className={m.text}>Обеспечьте свою практику лучшими инструментами от ведущих производителей</p>
+                            <button className={m.btn}>В каталог</button>
+                        </div>
                     </div>
                 </div>
                 <div className={m.recContainer}>
@@ -82,22 +88,12 @@ const Home: FC = () => {
                             <span className={m.desc}>Достигните белоснежной улыбки с нашей линейкой инструментов от ведущих производителей</span>
                             <button className={m.button}>Подробнее</button>
                         </div>
-                        <Image className={m.img} style={{height: 440}} src={BlankImg} alt="" />
+                        <Image className={m.img} style={{ height: 440 }} src={BlankImg} alt="" />
                     </div>
                 </div>
                 <div className={m.partnerContainer}>
-                <h2 className={m.title}>Наши <span className={m.span}>партнеры</span></h2>
-                    <div className={m.partnerWrapper}>
-                        <div className={m.partCard}>
-                            <Image className={m.partImg} src={Part1} alt="" />
-                        </div>
-                        <div className={m.partCard}>
-                            <Image className={m.partImg} src={Part2} alt="" />
-                        </div>
-                        <div className={m.partCard}>
-                            <Image className={m.partImg} src={Part3} alt="" />
-                        </div>
-                    </div>
+                    <h2 className={m.title}>Наши <span className={m.span}>партнеры</span></h2>
+                        <Slider images={images} />
                 </div>
             </div>
         </section>
