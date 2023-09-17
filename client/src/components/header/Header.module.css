@@ -32,6 +32,11 @@
     color: #7A7A7A;
 }
 
+.link:hover {
+    color: #E4A718;
+    transition: ease .4s;
+}
+
 .active {
     font-size: 23px;
     line-height: 20px;

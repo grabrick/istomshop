@@ -42,7 +42,7 @@ const CardComponent: FC<{ items: any }> = ({ items }) => {
   return (
     <div className={m.container}>
       <div className={m.wrapper}>
-        <Link href={`/card/${items?._id}`}>
+        <Link className={m.touchWrapper} href={`/card/${items?._id}`}>
         <img
           src={ items?.mainImage.length > 0 ? items?.mainImage : NotFound.src }
           alt='' className={ items?.mainImage.length > 0 ? m.image : m.notFound } />

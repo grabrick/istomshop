@@ -272,7 +272,7 @@
     }
 
     .title {
-        font-size: 35px;
+        font-size: 25px;
     }
 
     .partCard {
@@ -285,5 +285,36 @@
 
     .infoWrapper {
         margin-left: 10px;
+    }
+
+    .rec {
+        width: 465px;
+        padding: 10px;
+    }
+
+    .recWrapper {
+        padding: 0 10px;
+    }
+
+    .recSpan {
+        font-size: 20px;
+    }
+
+    .recTitle {
+        font-size: 27px;
+    }
+
+    .recIcor {
+        width: 75px;
+        height: 75px;
+    }
+
+    .recIcor2 {
+        width: 75px;
+        height: 75px;
+    }
+
+    .partCard {
+        width: 350px;
     }
 }

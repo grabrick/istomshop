@@ -52,6 +52,34 @@
     cursor: not-allowed;
 }
 
+@media screen and (max-width: 1440px) {
+    .cardWrapper {
+        max-width: 1090px;
+        padding: 10px;
+    }
+}
+
+/* @media screen and (max-width: 1105px) {
+    .cardWrapper {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        flex-wrap: wrap;
+        max-width: 1200px;
+        padding: 10px;
+    }
+} */
+
+@media screen and (max-width: 988px) {
+    .cardWrapper {
+        max-width: 1090px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding: 10px;
+    }
+}
+
 @media screen and (max-width: 671px) {
     .cardWrapper {
         display: flex;

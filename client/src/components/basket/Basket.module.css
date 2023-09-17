@@ -61,7 +61,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 800px;
+    max-width: 800px;
 }
 
 .priceWrapp {
@@ -135,7 +135,8 @@
 }
 
 .wrapperWrap {
-    width: 250px;
+    max-width: 250px;
+    gap: 100px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -198,4 +199,26 @@
     color: #E4A619;
     box-shadow: 0px 0px 10px 0px #E4A718;
     /* transition: ease .4s; */
+}
+
+@media screen and (max-width: 810px) {
+    .basketContent {
+        padding: 0 15px;
+    }
+
+    .wrapperWrap {
+        justify-content: flex-end;
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 503px) {
+    .itemsWrapper {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .wrapperWrap {
+        margin-top: 20px;
+    }
 }

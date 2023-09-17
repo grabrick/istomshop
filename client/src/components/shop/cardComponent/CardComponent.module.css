@@ -7,7 +7,6 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    cursor: pointer;
     padding: 5px 0;
 }
 
@@ -16,6 +15,10 @@
     margin-top: 10px;
     font-family: 'Montserrat';
     text-align: center;
+}
+
+.touchWrapper {
+    cursor: pointer;
 }
 
 .image {
@@ -77,4 +80,15 @@
     cursor: pointer;
     background-color: #b0b0b0;
     margin-top: 10px;
+}
+
+@media screen and (max-width: 1440px) {
+    .container {
+        max-width: 330px;
+    }
+
+    .image {
+        width: 323px;
+        height: 330px;
+    }
 }

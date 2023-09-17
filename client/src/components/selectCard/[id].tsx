@@ -68,7 +68,7 @@ const Card: FC<ICard> = () => {
               <div className={m.priceWrapper}>
                 <div className={m.priceTitleWrapper}>
                   <h3 className={m.priceTitle}>Цена:</h3>
-                  <span className={m.priceText}>{findCurrentCard?.price}</span>
+                  <span className={m.priceText}>{findCurrentCard?.price} ₽</span>
                 </div>
                 <div className={m.purchaseWrapper}>
                     <div className={m.buttonWrapper}>

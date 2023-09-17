@@ -4,7 +4,7 @@ import CardComponent from './cardComponent/CardComponent'
 // import Image from 'next/image'
 // import leftArrow from '../../../public/images/arrow-left-s-line.svg'
 // import rightArrow from '../../../public/images/arrow-right-s-line.svg'
-import Pagination from '@/components/extra/Paginate/Pagination'
+import Pagination from '@/components/Extra/Paginate/Pagination'
 import axios from 'axios'
 import { useAppDispatch, useAppSelector } from '@/redux/hooks/redux.hook'
 import { setCards } from '@/redux/slices/cardSlice'
@@ -12,7 +12,8 @@ import { setCards } from '@/redux/slices/cardSlice'
 
 const Home: FC = () => {
   const [data, setData] = useState([]);
-  // const data = useAppSelector(state => state.cardSlice.card)
+  const searchData = useAppSelector(state => state.cardSlice.searchResult)
+  const cardData = useAppSelector(state => state.cardSlice.card)
   const dispatch = useAppDispatch()
 
   useEffect(() => {
@@ -41,6 +42,16 @@ const Home: FC = () => {
   const handlePageChange = (pageNumber: number) => {
     setCurrentPage(pageNumber);
   };
+
+  useEffect(() => {
+    // console.log(searchData);
+    
+    if(searchData.length > 0) {
+      setData(searchData)
+    } else {
+      setData(cardData)
+    }
+  }, [searchData])
 
   return (
     <div className={m.container}>

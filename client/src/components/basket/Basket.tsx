@@ -61,7 +61,7 @@ const Basket: FC = () => {
                         <h2>{items.title}</h2>
                         <div className={m.priceWrapper}>
                           <p>Цена:</p>
-                          <p>{items.price}</p>
+                          <p>{items.price} ₽</p>
                         </div>
                         <div className={m.countWrapper}>
                           <p className={m.countTitle}>Количество: </p>
@@ -81,7 +81,7 @@ const Basket: FC = () => {
                 <div className={m.finalResult}>
                   <div className={m.priceWrapp}>
                     <p className={m.totalPrice}>Общая цена:</p>
-                    <span className={m.price}>{total}</span>
+                    <span className={m.price}>{total} ₽</span>
                   </div>
                   <button className={m.buyBtn}>Купить</button>
                 </div>
