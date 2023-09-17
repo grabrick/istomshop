@@ -24,8 +24,8 @@ const CardComponent: FC<{ items: any }> = ({ items }) => {
       <div className={m.wrapper}>
         <Link className={m.touchWrapper} href={`/card/${items?._id}`}>
         <img
-          src={ items?.mainImage.length > 0 ? items?.mainImage : NotFound.src }
-          alt='' className={ items?.mainImage.length > 0 ? m.image : m.notFound } />
+          src={ items?.mainImage?.length > 0 ? items?.mainImage : NotFound.src }
+          alt='' className={ items?.mainImage?.length > 0 ? m.image : m.notFound } />
         </Link>
         <p className={m.title}>{items?.title}</p>
         <button className={m.button} onClick={() => handleAddItem(items)}>

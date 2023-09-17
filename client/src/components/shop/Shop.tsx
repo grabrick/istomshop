@@ -29,7 +29,7 @@ const Home: FC = () => {
 
   const itemsPerPage = 21;
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const totalPages = Math.ceil(data.length / itemsPerPage);
+  const totalPages = Math.ceil(data?.length / itemsPerPage);
 
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
@@ -41,12 +41,12 @@ const Home: FC = () => {
   };
 
   useEffect(() => {    
-    if(searchData.length > 0) {
+    if(searchData?.length > 0) {
       setData(searchData)
     } else {
       setData(cardData)
     }
-  }, [searchData])
+  }, [cardData, searchData])
 
   return (
     <div className={m.container}>
@@ -62,7 +62,7 @@ const Home: FC = () => {
             {data.length > itemsPerPage && (
               <Pagination
                 totalPages={Math.ceil(
-                  data.length / itemsPerPage
+                  data?.length / itemsPerPage
                 )}
                 currentPage={currentPage}
                 onPageChange={handlePageChange}
