@@ -1,5 +1,5 @@
 import React, { FC, useEffect, useState } from 'react'
-import m from './burgerMenu.module.css'
+import m from './BurgerMenu.module.css'
 import Image from 'next/image'
 import Logo from "../../../../public/images/Logo.svg"
 import Close from "../../../../public/images/close-black.svg"
