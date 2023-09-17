@@ -42,10 +42,14 @@ const BurgerMenu: FC<Tprops> = ({ isActiveMenu, setOpened }) => {
                 </div>
               )}
             </div>
-            <Link className={router.asPath === '/shop' ? `${m.active}` : `${m.link}`} href="/shop">Магазин</Link>
-            <Link className={router.asPath === '/purchase' ? `${m.active}` : `${m.link}`} href="/purchase">Оплата и доставка</Link>
-            <Link className={router.asPath === '/about' ? `${m.active}` : `${m.link}`} href="/about">О нас</Link>
-            <Link className={router.asPath === '/contact' ? `${m.active}` : `${m.link}`} href="/contact">Контакты</Link>
+
+            <>
+              <Link className={router.asPath === '/shop' ? `${m.active}` : `${m.link}`} href="/shop">Магазин</Link>
+              <Link className={router.asPath === '/purchase' ? `${m.active}` : `${m.link}`} href="/purchase">Оплата и доставка</Link>
+              <Link className={router.asPath === '/about' ? `${m.active}` : `${m.link}`} href="/about">О нас</Link>
+              <Link className={router.asPath === '/contact' ? `${m.active}` : `${m.link}`} href="/contact">Контакты</Link>
+            </>
+
           </div>
         </div>
 
@@ -57,7 +61,7 @@ const BurgerMenu: FC<Tprops> = ({ isActiveMenu, setOpened }) => {
           </div>
 
           <div className={m.feedBack}>
-            <button className={m.fbButton}>ОБРАТНАЯ СВЯЗЬ</button>
+            <button className={m.fbButton}>Обратная связь</button>
           </div>
         </div>
       </div>

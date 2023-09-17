@@ -74,10 +74,6 @@
     margin-top: 40px;
 }
 
-.basketWrapper {
-    position: relative;
-}
-
 .count {
     position: absolute;
     top: -15px;
@@ -91,18 +87,10 @@
     border-radius: 50px;
 }
 
-.link {
-    font-size: 20px;
-    font-weight: 600;
-    font-family: "Montserrat";
-    line-height: 20px;
-    color: #7A7A7A;
+.basketWrapper {
+    position: relative;
 }
 
-.link:hover {
-    color: #E4A718;
-    transition: ease .4s;
-}
 
 .active {
     font-size: 23px;
@@ -121,4 +109,17 @@
 .logo {
     width: 150px;
     height: 60px;
+}
+
+.link {
+    font-size: 20px;
+    font-weight: 600;
+    font-family: "Montserrat";
+    line-height: 20px;
+    color: #7A7A7A;
+}
+
+.link:hover {
+    color: #E4A718;
+    transition: ease .4s;
 }
