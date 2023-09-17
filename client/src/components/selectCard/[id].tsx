@@ -23,7 +23,6 @@ const Card: FC<ICard> = () => {
   const increment = () => {
     setCount(count + 1);
   };
-  console.log(findCurrentCount);
 
   const decrement = () => {
     if (count !== 0) {
@@ -43,7 +42,6 @@ const Card: FC<ICard> = () => {
     dispatch(addItem({ id: items._id, image: items.mainImage, title: items.title, price: items.price, count: count }))
 
   }
-
 
   return (
     <div className={m.container}>
@@ -80,7 +78,7 @@ const Card: FC<ICard> = () => {
                     <p className={m.descriptionText} id={m.Text}>Не указан</p>
                   </>
                 )}
-                {findCurrentCard?.characteristics.size ? (
+                {findCurrentCard?.characteristics?.size ? (
                   <>
                     <h3 className={m.descriptionTitle}>Размер</h3>
                     <p className={m.descriptionText}>{findCurrentCard?.characteristics?.structure}</p>
