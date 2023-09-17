@@ -15,7 +15,7 @@ import clearTooth from '../../../public/images/clearTooth.svg'
 import clean from '../../../public/images/clean.svg'
 import BlankImg from '../../../public/images/blankImg.svg'
 import Image from "next/image";
-import Slider from "../Extra/Slider/Slider";
+import Slider from "../extra/Slider/Slider";
 
 const Home: FC = () => {
     const cardData = [

@@ -1,7 +1,7 @@
 import React, { FC, useEffect, useState } from 'react'
 import m from './Shop.module.css'
 import CardComponent from './cardComponent/CardComponent'
-import Pagination from '@/components/Extra/Paginate/Pagination'
+import Pagination from '@/components/extra/Paginate/Pagination'
 import axios from 'axios'
 import { useAppDispatch, useAppSelector } from '@/redux/hooks/redux.hook'
 import { setCards } from '@/redux/slices/cardSlice'
