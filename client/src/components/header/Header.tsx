@@ -14,7 +14,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useAppDispatch, useAppSelector } from '@/redux/hooks/redux.hook'
 import { searchCards } from '@/redux/slices/cardSlice'
-import BurgerMenu from '../Extra/burgerMenu/burgerMenu'
+import BurgerMenu from '@/components/Extra/burgerMenu/burgerMenu'
 
 const Header: FC = () => {
     const [open, setOpen] = useState<boolean>(false);
