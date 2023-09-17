@@ -191,10 +191,6 @@
     .contactText {
         font-size: 12px;
     }
-
-    .wrappWrapper {
-        /* flex-direction: column; */
-    }
 }
 
 @media screen and (max-width: 550px) {

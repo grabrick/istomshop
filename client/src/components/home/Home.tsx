@@ -37,7 +37,7 @@ const Home: FC = () => {
         '/images/slider/inibsa1.jpg',
         '/images/slider/kristident1.jpg',
         '/images/slider/taifunn1.jpg',
-      ];
+    ];
 
     return (
         <section className={m.container}>

@@ -27,7 +27,7 @@ const Header: FC = () => {
 
     useEffect(() => {
         setData(state)
-    }, [state])   
+    }, [state])
 
     const handleChangeInput = (e: any) => {
         setSearchInput(e.target.value)
@@ -50,11 +50,11 @@ const Header: FC = () => {
         if (!searchInput.trim()) return;
         dispatch(searchCards(searchInput))
     }
-    
+
     return (
         <header className={m.container}>
             <div className={m.wrapper}>
-                <Image className={m.logo} src={Logo} alt='' onClick={() => {router.push('/home')}} />
+                <Image className={m.logo} src={Logo} alt='' onClick={() => { router.push('/home') }} />
 
                 <div className={m.linkWrapper}>
                     <Link className={router.asPath === '/shop' ? `${m.active}` : `${m.link}`} href="/shop">Магазин</Link>
@@ -75,7 +75,7 @@ const Header: FC = () => {
                                 <Image className={m.img} src={Search} alt='' />
                             </button>
                         )}
-                        
+
                     </div>
                 ) : (
                     ""
@@ -86,18 +86,14 @@ const Header: FC = () => {
                     <Image className={m.contactLink} src={Telegram} alt='' />
                     <Image className={m.contactLink} src={Whatsapp} alt='' />
 
-                    {/* {router.asPath === '/shop' || data.length > 0 ? ( */}
-                        <Link href="/basket" className={m.basketWrapper}>
-                            <Image className={m.contactLink} src={router.asPath === '/basket' ? BasketActive : Basket} alt='' />
-                            {data.length > 0 && (
-                                <div className={m.count}>
-                                    <p>{data.length}</p>
-                                </div>
-                            )}
-                        </Link>
-                    {/* ) : (
-                        ""
-                    )} */}
+                    <Link href="/basket" className={m.basketWrapper}>
+                        <Image className={m.contactLink} src={router.asPath === '/basket' ? BasketActive : Basket} alt='' />
+                        {data.length > 0 && (
+                            <div className={m.count}>
+                                <p>{data.length}</p>
+                            </div>
+                        )}
+                    </Link>
                 </div>
 
                 <div className={m.burgerMenu}>

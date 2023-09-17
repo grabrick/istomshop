@@ -78,7 +78,6 @@
     justify-content: center;
     border-radius: 0 15px 15px 0;
     padding: 10px;
-    /* margin-left: 300px; */
 }
 
 .inputWrapper {
@@ -90,7 +89,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* width: 100px; */
 }
 
 .basketWrapper {
@@ -103,7 +101,6 @@
     background-color: #E4A818;
     width: 25px;
     height: 25px;
-    /* padding: 5px; */
     display: flex;
     align-items: center;
     justify-content: center;

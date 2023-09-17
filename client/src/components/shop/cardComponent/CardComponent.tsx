@@ -5,26 +5,6 @@ import NotFound from "../../../../public/images/NotFound.svg"
 import Link from 'next/link'
 import { useAppDispatch, useAppSelector } from '@/redux/hooks/redux.hook'
 import { addItem } from '@/redux/slices/basketSlice'
-import { IBasket } from '@/types/types'
-
-// Нужно будет поменять price: string, на price: number 
-// interface IcardItems {
-//     title: string,
-//     description: string,
-//     image: string,
-//     price: string, 
-//     characteristics: {}
-// }
-
-// interface IcardItems {
-//   _id: number,
-//   title: string,
-//   description: string,
-//   mainImage: string,
-//   price: number,
-//   category: string,
-//   rating: number,
-// }
 
 const CardComponent: FC<{ items: any }> = ({ items }) => {
   const dispatch = useAppDispatch()
